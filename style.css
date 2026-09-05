@@ -1,0 +1,181 @@
+/* Reset & Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+header p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* Tata Letak Builder (Sidebar Controls + Main Preview) */
+.builder-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* Panel Kontrol (Sidebar) */
+.control-panel {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    flex: 1;
+    min-width: 280px;
+}
+
+.control-panel h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.control-group {
+    margin-bottom: 18px;
+}
+
+.control-group label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Output Kode CSS & Tombol Copy */
+.code-output {
+    margin-top: 20px;
+}
+
+.code-output label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.code-output textarea {
+    width: 100%;
+    height: 100px;
+    background-color: #282c34;
+    color: #61afef;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.btn-copy {
+    width: 100%;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-copy:hover {
+    background-color: #219150;
+}
+
+/* Area Pratinjau Galeri */
+.gallery-preview {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    flex: 2;
+    min-width: 300px;
+}
+
+.gallery-preview h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* Wadah CSS Grid (Akan diubah propertinya via JS) */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    transition: all 0.2s ease;
+}
+
+/* Item Gambar Galeri */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #ddd;
+    height: 200px; /* Default height */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.item-label {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 3px 8px;
+    font-size: 11px;
+    border-radius: 4px;
+}
