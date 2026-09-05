@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Builder - Penyusun Layout Galeri Foto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Penyusun Layout Galeri Foto</h1>
+            <p>Atur jumlah kolom, jarak antar gambar, dan tinggi baris secara real-time.</p>
+        </header>
+
+        <div class="builder-layout">
+            <!-- Panel Kontrol (Input Pengaturan) -->
+            <aside class="control-panel">
+                <h2>Panel Kontrol</h2>
+
+                <!-- Control: Jumlah Kolom -->
+                <div class="control-group">
+                    <label for="columnsInput">
+                        Jumlah Kolom: <span id="columnsVal">3</span>
+                    </label>
+                    <input type="range" id="columnsInput" min="1" max="6" value="3">
+                </div>
+
+                <!-- Control: Gap (Jarak) -->
+                <div class="control-group">
+                    <label for="gapInput">
+                        Jarak / Gap: <span id="gapVal">16px</span>
+                    </label>
+                    <input type="range" id="gapInput" min="0" max="40" value="16">
+                </div>
+
+                <!-- Control: Tinggi Item -->
+                <div class="control-group">
+                    <label for="heightInput">
+                        Tinggi Foto: <span id="heightVal">200px</span>
+                    </label>
+                    <input type="range" id="heightInput" min="100" max="350" value="200">
+                </div>
+
+                <!-- Hasil Output Kode CSS -->
+                <div class="code-output">
+                    <label>Kode CSS Yang Dihasilkan:</label>
+                    <textarea id="cssCode" readonly></textarea>
+                    <button id="copyBtn" class="btn-copy">Salin Kode CSS</button>
+                </div>
+            </aside>
+
+            <!-- Area Pratinjau Galeri Foto -->
+            <main class="gallery-preview">
+                <h2>Pratinjau Galeri</h2>
+                <div class="grid-gallery" id="gridGallery">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/300?random=1" alt="Foto 1">
+                        <span class="item-label">Foto 1</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/300?random=2" alt="Foto 2">
+                        <span class="item-label">Foto 2</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/300?random=3" alt="Foto 3">
+                        <span class="item-label">Foto 3</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/300?random=4" alt="Foto 4">
+                        <span class="item-label">Foto 4</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/300?random=5" alt="Foto 5">
+                        <span class="item-label">Foto 5</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/400/300?random=6" alt="Foto 6">
+                        <span class="item-label">Foto 6</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
